@@ -23,10 +23,13 @@ nav {
   float: right;
 }
 
+a {
+  text-decoration: none;
+  color: #FFC0CB;
+}
+
 nav a,
 #contact-me a {
-  color:#FFC0CB;
-  text-decoration: none;
   font-size: 125%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   border-bottom: 3px solid #FFC0CB;
@@ -78,12 +81,35 @@ h2 {
   color:#FF69B4;
 }
 
-.card .card-header {
-  border-radius: 8px;
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100%;
+  padding: 2rem;
+  margin: 0.5rem;
+
+  /* outline is like border, but on the outside of the box instead of inside */
+  outline: 2px dashed black;
+  outline-offset: -2px;
   transition: all 0.5s ease-in-out;
+}
+
+.card .card-header {
+  border: solid black;
+  transition: all 0.5s ease-in-out;
+}
+
+.card-header {
+  background: #FF69B4;
+  color:#FFC0CB;
+  position: relative;
+  margin-top: -20px;
+  overflow-wrap: break-word;
+  width: auto;
 }
 
 .card:hover,
 .card:hover .card-header {
-  box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+  box-shadow: inset 0px 0px 8px #FFC0CB, 0 0 15px #FFC0CB;
 }
